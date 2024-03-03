@@ -4,19 +4,19 @@ pipeline {
 
     stage ('Preparing the environment'){
       steps {
-        sh 'python3 -m pip install -r requirements.txt'
+        sh 'python -m pip install -r requirements.txt'
       }
     }
     
     stage('Code Quality'){
       steps {
-        sh 'pyhton3 -m pylint app.py'
+        sh 'python -m pylint app.py'
       }
     }
     
     stage('Tests'){
       steps {
-        sh 'pyhton3 -m pytest'
+        sh 'python -m pytest'
       }
     }
       
