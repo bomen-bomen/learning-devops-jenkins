@@ -4,7 +4,9 @@ pipeline {
 
     stage ('Preparing the environment'){
       steps {
-        sh 'python -m pip install -r requirements.txt'
+        sh 'apt install python3-pylink'
+        sh 'apt install python3-flask'
+        sh 'apt install python3-pytest'
       }
     }
     
