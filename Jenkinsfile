@@ -4,7 +4,7 @@ pipeline {
 
     stage ('Preparing the environment'){
       steps {
-        sh 'sudo docker exec -ti -u 0 jenkins pyhton3 -m pip install -r requirements.txt'
+        sh 'sudo docker exec -ti -u 0 jenkins apt install pyhton3-pytest'
       }
     }
     
