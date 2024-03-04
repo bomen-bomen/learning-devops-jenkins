@@ -4,7 +4,7 @@ pipeline {
 
     stage ('Preparing the environment'){
       steps {
-        sh 'python3 -m pip install -r requirements.txt'
+        sh 'apt install python3-pytest -y'
       }
     }
     
