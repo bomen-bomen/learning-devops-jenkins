@@ -4,9 +4,7 @@ pipeline {
 
     stage ('Preparing the environment'){
       steps {
-        sh 'apt install python3-pylink'
-        sh 'apt install python3-flask'
-        sh 'apt install python3-pytest'
+        sh 'docker exec -ti -u 0 jenkins pip install pytest'
       }
     }
     
