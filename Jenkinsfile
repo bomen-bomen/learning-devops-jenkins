@@ -4,7 +4,7 @@ pipeline {
 
     stage ('Preparing the environment'){
       steps {
-        sh 'apt install python3-pytest -y'
+        sh 'sudo apt install python3-pytest -y'
       }
     }
     
